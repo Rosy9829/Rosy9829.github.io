@@ -1,35 +1,39 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('img/picture.png'); /* 替换为你的背景图片文件 */
+        background-size: cover;
+        background-position: center;
+    }
+    canvas {
+        display: block;
+    }
 header {
-    background-image: url('img/picture.png'); /* Replace with your image file */
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 5em;
+    padding: 4em 0; /* 调整内边距以获得更好的可见性 */
 }
 
 nav {
     margin: 0;
     padding: 0.5em;
-
     text-align: center;
 }
 
 nav a {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     padding: 1em;
     display: inline-block;
 }
 
 nav a:hover {
-    background-color: #ddd;
+    background-color: rgba(221, 221, 221, 0.8); /* 半透明背景 */
     color: black;
 }
 
@@ -39,11 +43,24 @@ main {
 }
 
 footer {
-  
-    color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
     padding: 1em;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+audio {
+    width: 100px; /* 设置音频播放器的宽度 */
+    height: 10px; /* 设置音频播放器的高度 */
+    margin: 0 auto; /* 居中显示音频播放器 */
+    display: block; /* 使音频播放器成为块级元素 */
+}
+
+video {
+    width: 300px; /* 设置视频播放器的宽度 */
+    height: auto; /* 保持视频播放器的宽高比 */
+    margin: 0 auto; /* 居中显示视频播放器 */
+    display: block; /* 使视频播放器成为块级元素 */
 }
