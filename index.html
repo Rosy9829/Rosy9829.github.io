@@ -5,25 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Webpage</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('img/picture.png'); /* 替换为你的背景图片文件 */
+            background-size: cover;
+            background-position: center;
+            text-align: center; /* 居中对齐文本 */
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, main, footer {
+            width: 100%;
+            max-width: 800px;
+            padding: 1em;
+        }
+
+        header h1 {
+            margin: 0.5em 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            margin: 1em 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        main {
+            margin: 1em 0;
+        }
+
+        footer {
+            margin-top: 2em;
+        }
+    </style>
 </head>
-<style>
-    body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image: url('img/picture.png'); /* 替换为你的背景图片文件 */
-        background-size: cover;
-        background-position: center;
-    }
-    canvas {
-        display: block;
-    }
-</style>
+<body>
 
 <header>
-    <h1>Welcome to My Simple Webpage</h1>
+    <h1>Welcome to My Webpage</h1>
 </header>
 
 <nav>
@@ -31,20 +64,19 @@
     <a href="images.html">Images</a>
     <a href="video.html">Videos</a>
     <a href="music.html">Audio</a>
- 
     <a href="contact.html">Contact</a>
 </nav>
 
 <main>
-    <h2>Hello,everyone </h2>
-    <p>Hello, my name is Song Yan. Nice to meet you,i like sing</i></p>
+    <h2>Hello, everyone</h2>
+    <p>Hello, my name is Song Yan. Nice to meet you, I like to sing.</p>
 </main>
 
 <footer>
-    &copy; 2024,Rosy's webpage.
+    &copy; 2024, Rosy's webpage.
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script src="sketch.js"></script>
 </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="sketch.js"></script>
 </html>
