@@ -1,66 +1,64 @@
-    body {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image: url('img/picture.png'); /* 替换为你的背景图片文件 */
-        background-size: cover;
-        background-position: center;
-    }
-    canvas {
-        display: block;
-    }
-header {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('img/fengj.jpg'); /* 替换为你的背景图片路径 */
     background-size: cover;
     background-position: center;
-    color: white;
+    background-attachment: fixed;
+}
+
+header {
+    color: rgb(27, 26, 26);
     text-align: center;
-    padding: 4em 0; /* 调整内边距以获得更好的可见性 */
+    padding: 1em 0;
 }
 
 nav {
-    margin: 0;
-    padding: 0.5em;
     text-align: center;
+    margin: 1em 0;
 }
 
 nav a {
-    color: white;
+    margin: 0 1em;
     text-decoration: none;
-    padding: 1em;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: rgba(221, 221, 221, 0.8); /* 半透明背景 */
-    color: black;
+    color: #333;
+    font-weight: bold;
 }
 
 main {
-    padding: 2em;
     text-align: center;
+    padding: 2em 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.gallery-item {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 footer {
     color: white;
     text-align: center;
-    padding: 1em;
-    position: fixed;
+    padding: 1em 0;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-audio {
-    width: 100px; /* 设置音频播放器的宽度 */
-    height: 10px; /* 设置音频播放器的高度 */
-    margin: 0 auto; /* 居中显示音频播放器 */
-    display: block; /* 使音频播放器成为块级元素 */
-}
-
-video {
-    width: 300px; /* 设置视频播放器的宽度 */
-    height: auto; /* 保持视频播放器的宽高比 */
-    margin: 0 auto; /* 居中显示视频播放器 */
-    display: block; /* 使视频播放器成为块级元素 */
-}

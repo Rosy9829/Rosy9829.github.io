@@ -1,0 +1,51 @@
+let particles = [];
+
+function setup() {
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0, 0);
+    canvas.style('z-index', '-1');
+    for (let i = 0; i < 300; i++) {
+        particles.push(new Particle());
+    }
+}
+
+function draw() {
+    background(255);
+    for (let particle of particles) {
+        particle.update();
+        particle.show();
+    }
+}
+
+class Particle {
+    constructor() {
+        this.x = random(width);
+        this.y = random(height);
+        this.r = random(4, 8);
+        this.xSpeed = random(-2, 2);
+        this.ySpeed = random(-2, 2);
+    }
+
+    update() {
+        this.x += this.xSpeed;
+        this.y += this.ySpeed;
+
+        if (this.x > width || this.x < 0) {
+            this.xSpeed *= -1;
+        }
+
+        if (this.y > height || this.y < 0) {
+            this.ySpeed *= -1;
+        }
+    }
+
+    show() {
+        noStroke();
+        fill(0, 150);
+        ellipse(this.x, this.y, this.r * 2);
+    }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
